@@ -7,8 +7,5 @@ use \App\Models\User;
 
 
 
-//    $post = Post::findAll();
-//    var_dump($post);
-
-    $user = User::findAll();
-    var_dump($user);
+    $post = Post::findAll();
+    var_dump($post);

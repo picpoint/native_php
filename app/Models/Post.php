@@ -3,26 +3,23 @@
 
 namespace App\Models;
 
-
 use App\Db;
+use App\Model;
 
-class Post
+class Post extends Model
 {
 
-    public $id;
     public $title;
     public $content;
     public $created_at;
+    public const TABLE = 'posts';
 
-    public static $table = 'posts';
 
+//    public static function findAll() {
+//        $db = new Db();
+//        return $db->query('SELECT * FROM ' . self::TABLE, [], self::class);
+//    }
 
-    public static function findAll() {
-        $db = new Db();
-        $data = $db->query('SELECT * FROM posts');
-
-        return $data;
-    }
 
 
 }

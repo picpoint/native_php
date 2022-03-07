@@ -3,10 +3,9 @@
 
 namespace App\Models;
 
+use App\Model;
 
-use App\Db;
-
-class User
+class User extends Model
 {
 
     public $id;
@@ -15,12 +14,7 @@ class User
     public $password;
     public $email;
     public $created_at;
-
-
-    public static function findAll() {
-        $db = new Db();
-        return $db->query('SELECT * FROM users');
-    }
+    public static $table = 'users';
 
 
 }
